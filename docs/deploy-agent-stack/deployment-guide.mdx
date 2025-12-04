@@ -31,7 +31,7 @@ are explained in the [Configuration Options](#configuration-options) section.
 ```yaml
 # If you want to include agents from the default catalog (change release/tag accordingly):
 externalRegistries:
-  public_github: "https://github.com/i-am-bee/agentstack@v0.4.1#path=agent-registry.yaml"
+  public_github: "https://github.com/i-am-bee/agentstack@v0.4.2#path=agent-registry.yaml"
 
 # Your custom agents as docker images
 providers:
@@ -62,7 +62,7 @@ auth:
 Then install the chart using:
 
 ```shell
-helm upgrade --install agentstack -f config.yaml oci://ghcr.io/i-am-bee/agentstack/chart/agentstack:0.4.1
+helm upgrade --install agentstack -f config.yaml oci://ghcr.io/i-am-bee/agentstack/chart/agentstack:0.4.2
 ```
 
 It will take a few minutes for the pods to start.
@@ -182,9 +182,9 @@ Configure specific agents in your deployment:
 ```yaml
 providers:
   # Official agents
-  - location: ghcr.io/i-am-bee/agentstack/agents/chat:0.4.1
-  - location: ghcr.io/i-am-bee/agentstack/agents/rag:0.4.1
-  - location: ghcr.io/i-am-bee/agentstack/agents/form:0.4.1
+  - location: ghcr.io/i-am-bee/agentstack/agents/chat:0.4.2
+  - location: ghcr.io/i-am-bee/agentstack/agents/rag:0.4.2
+  - location: ghcr.io/i-am-bee/agentstack/agents/form:0.4.2
 
   # Your custom agents
   - location: your-registry.com/your-team/custom-agent:v1.0.0
@@ -203,7 +203,7 @@ You can use the concept of agent registries instead of specifying individual age
 
 ```yaml
 externalRegistries:
-  public_github: "https://github.com/i-am-bee/agentstack@v0.4.1#path=agent-registry.yaml"
+  public_github: "https://github.com/i-am-bee/agentstack@v0.4.2#path=agent-registry.yaml"
 ```
 
 To upgrade an agent, change its version in the registry and wait for automatic synchronization (up to 10 minutes).
@@ -344,7 +344,7 @@ externalS3:
 
 ### Advanced Configuration
 The list of all configuration options is available in the
-[values.yaml](https://github.com/i-am-bee/agentstack/blob/v0.4.1/helm/values.yaml) file. If you have specific
+[values.yaml](https://github.com/i-am-bee/agentstack/blob/v0.4.2/helm/values.yaml) file. If you have specific
 requirements for the helm chart configuration which are not covered by the current options, please open an issue.
 
 ## Management Commands
